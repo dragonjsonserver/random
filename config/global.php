@@ -13,18 +13,8 @@
 return [
     'dragonjsonserverrandom' => [
         'password' => [
-            'length'  => 16,
-            'charset' => 'abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789',
+            'length'  => '%length%',
+            'charset' => '%charset%',
         ],
     ],
-    'dragonjsonserver' => [
-        'apiclasses' => [
-            '\DragonJsonServerRandom\Api\Random' => 'Random',
-        ],
-    ],
-	'service_manager' => [
-		'invokables' => [
-            '\DragonJsonServerRandom\Service\Random' => '\DragonJsonServerRandom\Service\Random',
-		],
-	],
 ];

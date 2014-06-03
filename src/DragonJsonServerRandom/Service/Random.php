@@ -110,6 +110,9 @@ class Random
      */
     public function getElements(array $elements, $amount)
     {
+        if (count($this->values) > 0) {
+            return array_shift($this->values);
+        }
         $randoms = [];
         for ($i = 0; $i < $amount; ++$i) {
             $randoms[] = $this->getRandomElement($elements);
