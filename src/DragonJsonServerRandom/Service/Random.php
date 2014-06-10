@@ -72,7 +72,7 @@ class Random
         $number = $serviceRandom->getRandomNumber([1, 100]);
         $number = $serviceRandom->getRandomNumber(['min' => 1, 'max' => 100]);
      */
-    public function getNumber($min, $max)
+    public function getNumber($min, $max = null)
     {
         if (count($this->values) > 0) {
             return array_shift($this->values);
